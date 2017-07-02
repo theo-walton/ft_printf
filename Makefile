@@ -24,6 +24,7 @@ $(NAME):
 	@ar rc $(NAME) *.o
 	@ranlib $(NAME)
 	@rm libft.h
+	@cat *
 
 clean:
 	@rm -rf $(wildcard *.o)
