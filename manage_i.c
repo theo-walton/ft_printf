@@ -39,10 +39,7 @@ int	manage_i(va_list arg, t_info *new)
 	int strlen;
 
 	if (new->length != '\0')
-	{
-		if (!(num = get_signed_arg(arg, new)))
-			return (-1);
-	}
+		num = get_signed_arg(arg, new);
 	else
 		num = va_arg(arg, int);
 	check_negative(num, &num2, new);
@@ -56,6 +53,6 @@ int	manage_i(va_list arg, t_info *new)
 		return (-1);
 	ft_putstr(str);
 	strlen = ft_strlen(str);
-	//free(str);
+	free(str);
 	return (strlen);
 }

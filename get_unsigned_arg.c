@@ -16,6 +16,7 @@ uintmax_t	get_unsigned_arg(va_list arg, t_info *new)
 {
 	uintmax_t ret;
 
+	ret = 12345678;
 	if (new->length == 'l')
 		ret = va_arg(arg, unsigned long int);
 	if (new->length == 'b')

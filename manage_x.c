@@ -42,10 +42,7 @@ int	manage_x(va_list arg, t_info *new)
 	int strlen;
 
 	if (new->length != '\0')
-	{
-		if (!(num = get_unsigned_arg(arg, new)))
-			return (-1);
-	}
+		num = get_unsigned_arg(arg, new);
 	else
 		num = va_arg(arg, unsigned int);
 	str = printf_uitoa(num, 16, 'x');

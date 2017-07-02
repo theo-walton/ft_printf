@@ -21,13 +21,17 @@ static int	add_char(char **str, char c)
 	strlen = ft_strlen(*str);
 	i = 0;
 	if (!(new = ft_strnew(sizeof(char) * (strlen + 1))))
+	{
+		free(*str);
 		return (0);
+	}
 	while (i < strlen)
 	{
 		new[i + 1] = (*str)[i];
 		++i;
 	}
 	new[0] = c;
+	free(*str);
 	*str = new;
 	return (1);
 }
