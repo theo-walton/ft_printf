@@ -24,10 +24,11 @@ static int	add_char(char **str, char c)
 		return (0);
 	while (i < strlen)
 	{
-		new[i + 1] = *str[i];
+		new[i + 1] = (*str)[i];
 		++i;
 	}
 	new[0] = c;
+	*str = new;
 	return (1);
 }
 

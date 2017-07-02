@@ -15,16 +15,8 @@
 static uintmax_t	make_pos(intmax_t num)
 {
 	uintmax_t ret;
-	intmax_t i;
 
-	i = 1;
-	ret = -(num / 10);
-	while (num / 10)
-	{
-		num = num / 10;
-		i = i * 10;
-	}
-	ret = ret + -((num / i) * i);
+	ret = -num;
 	return (ret);
 }
 
