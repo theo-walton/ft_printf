@@ -47,5 +47,6 @@ int	ft_printf(const char *format, ...)
 		if (total_print < 0)
 			ret = total_print;
 	}
+	va_end(arg);
 	return (ret);
 }

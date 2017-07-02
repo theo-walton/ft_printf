@@ -26,14 +26,11 @@ static int	add_zeros(char **str, int num)
 	}
 	while (i < num)
 		new[i++] = '0';
-	while (*str[i - num])
+	while ((*str)[i - num])
 	{
-		new[i] = *str[i - num];
+		new[i] = (*str)[i - num];
 		++i;
-		ft_putnbr(i - num);
-		write(1, "\n", 1);
 	}
-	write(1, "g", 1);
 	free(*str);
 	*str = new;
 	return (1);
@@ -43,7 +40,7 @@ static int	edgecases(char **str)
 {
 	char *new;
 
-	if (*str[0] == '0')
+	if ((*str)[0] == '0')
 	{
 		if (!(new = ft_strnew(0)))
 			return (0);
@@ -73,7 +70,7 @@ int	str_precision(char **str, t_info *new)
 	{
 		if (new->precision > (int)ft_strlen(*str))
 			return (1);
-		*str[new->precision] = '\0';
+		(*str)[new->precision] = '\0';
 			return (1);
 	}
 	return (1);

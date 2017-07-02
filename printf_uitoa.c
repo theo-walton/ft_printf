@@ -39,13 +39,32 @@ static char	*reducestr(char *str, int size)
 	return (new);
 }
 
-static void	upper_digits(char *digits)
+static void	get_digits(char *digits, char xX)
 {
 	int i;
 
-	i = 8;
-	while (++i < 16)
-		digits[i] = digits[i] - 32;
+	i = 0;
+	while (i < 10)
+	{
+		digits[i] = i + '0';
+		i++;
+	}
+	if (xX == 'x')
+	{
+		while (i < 16)
+		{
+			digits[i] = i + 'a' - 10;
+				i++;
+		}
+	}
+	else
+	{
+		while (i < 16)
+		{
+			digits[i] = i + 'A' - 10;
+			i++;
+		}
+	}
 }
 
 static char	*zerostring(void)
@@ -60,20 +79,19 @@ static char	*zerostring(void)
 
 char	*printf_uitoa(uintmax_t num, int base, char xX)
 {
-	char *digits = "0123456789abcdef";
+	char digits[16];
 	char *str;
 	int i;
 
 	if (num == 0)
 		return (zerostring());
-	if (xX == 'X')
-		upper_digits(digits);
+	get_digits(digits, xX);
 	i = sizeof(uintmax_t);
 	if ((str = ft_strnew(sizeof(char) * i)) == NULL)
 		return (NULL);
 	while (num)
 	{
-		str[--i] = num % base + '0';
+		str[--i] = digits[num % base];
 		num = num / base;
 	}
 	return (reducestr(str, sizeof(uintmax_t)));

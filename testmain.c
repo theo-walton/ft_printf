@@ -15,6 +15,6 @@
 
 int	main(void)
 {
-	printf("%5.3d\n", 4);
-	ft_printf("%5.3d\n", 4);
+	printf("  : %#012o\n", 63);
+	ft_printf("ft: %#012o\n", 63);
 }

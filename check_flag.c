@@ -23,12 +23,11 @@ void	check_flag(const char *format, int *i, t_info *new)
 {
 	int counter;
 	int iter;
-
 	iter = 0;
 	counter = 0;
-	while (isflag(format[*i + counter]) && counter < 5)
+	while (isflag(format[*i + counter]))
 		counter++;
-	while (*i < counter)
+	while (iter < counter)
 	{
 		if (format[*i + iter] == '#')
 			new->flag1 = 1;

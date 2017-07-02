@@ -56,16 +56,12 @@ int	manage_i(va_list arg, t_info *new)
 	check_negative(num, &num2, new);
 	if (!(str = printf_uitoa(num2, 10, 'x')))
 		return (-1);
-	write(1, "a\n",	2);
 	if (!str_precision(&str, new))
 		return (-1);
-	write(1, "k", 1);
 	if (!(add_sign(&str, new)))
 		return (-1);
-	write(1, "o", 1);
 	if (!str_width(&str, new))
 		return (-1);
-	write(1, "p", 1);
 	ft_putstr(str);
 	strlen = ft_strlen(str);
 	free(str);
