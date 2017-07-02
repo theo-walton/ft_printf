@@ -38,6 +38,7 @@ int	command_center(va_list arg, t_info *new)
 {
 	int ret;
 
+	return (1);
 	ret = 0;
 	if (new == (t_info*)1)
 		return (1);
