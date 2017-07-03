@@ -112,7 +112,7 @@ int	str_width(char **str, t_info *new)
 	if (new->flag4)
 	{
 		if (!add_blanks_right(str, -ft_strlen(*str) + new->width))
-	 		return (0);
+			return (0);
 		return (1);
 	}
 	if (!add_blanks_left(str, -ft_strlen(*str) + new->width))

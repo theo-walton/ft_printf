@@ -15,6 +15,6 @@
 
 int	main(void)
 {
-	printf("  : %.3s\n", "string");
-	ft_printf("ft: %.3s\n", "string");
+	printf("  : %s\n", "string");
+	ft_printf("ft: %-70.55s\n", "stringagagegnesgnesgnewgnewougnoewigoewigoiewgoiewgoiewhgoiwehgoiewhogihewoighwoeihgoiwehgoiwehgioewhogewhogiweghewoihgoeiwhgoiwehgoiewhogihweoighwoeihbgoiewhbgoiewgiowehgoiwheowih", "gsgegiseoniosegnoengewijpjpwengpwengowgoiewng*goewnigwoingewoigwe*lgewknigewngoew8w**wqgwbgowebgoewhgogwebgoiwegoiwegoibweogibweoigbweoigbweobglwejbgjlwebglwebg");
 }
