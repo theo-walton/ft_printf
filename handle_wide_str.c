@@ -17,7 +17,7 @@ static int	get_wide_len(int *i)
 	int ret;
 
 	ret = 0;
-	while ((char)*i)
+	while (*i)
 	{
 		i = i + 4;
 		ret++;
@@ -56,7 +56,7 @@ static void	print_wide_str(int *arr, int precision)
 	i = 0;
 	if (precision < 0)
 		precision = 2147483647;
-	while ((char)arr[i] && i < precision)
+	while (arr[i] && i < precision)
 		print_wide_char(arr[i++]);
 }
 
