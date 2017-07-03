@@ -17,7 +17,7 @@ static int	get_wide_len(int *i)
 	int ret;
 
 	ret = 0;
-	while (i++)
+	while ((char)i)
 		ret++;
 	return (ret);
 }
@@ -77,7 +77,6 @@ int	handle_wide_str(va_list *arg, t_info *new)
 
 	arr = va_arg(*arg, int*);
 	strlen = get_wide_len(arr);
-	return (-1);
 	if (new->flag4)
 	{
 		print_wide_str(arr, new->precision);
