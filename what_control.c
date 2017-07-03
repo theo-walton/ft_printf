@@ -31,6 +31,7 @@ t_info	*what_control(const char *format, int *i)
 	new->flag4 = 0;
 	new->flag5 = 0;
 	new->flag6 = 0;
+	new->toggle = -1;
 	check_flag(format, i, new);
 	check_width(format, i, new);
 	check_precision(format, i, new);

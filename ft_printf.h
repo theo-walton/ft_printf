@@ -28,6 +28,7 @@ typedef struct s_info
 	int flag4;
 	int flag5;
 	int flag6;
+	int toggle;
 	int width;
 	int precision;
 	char length;

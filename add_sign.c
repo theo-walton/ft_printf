@@ -38,11 +38,9 @@ static int	add_charr(char **str, char c)
 
 int	add_sign(char **str, t_info *new)
 {
-	if (new->flag2)
-	{
-		new->flag2 = 0;
+	(new->toggle)++;
+	if ((new->flag2 || new->toggle) && !(new->flag2 && new->toggle))
 		return (1);
-	}
 	if (new->flag6)
 	{
 		if (!add_charr(str, '-'))
@@ -61,6 +59,5 @@ int	add_sign(char **str, t_info *new)
 			return (0);
 		return (1);
 	}
-	new->flag2 = 1;
 	return (1);
 }
