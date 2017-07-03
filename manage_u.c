@@ -29,6 +29,6 @@ int	manage_u(va_list *arg, t_info *new)
 		return (-1);
 	ft_putstr(str);
 	strlen = ft_strlen(str);
-	//free(str);
+	free(str);
 	return (strlen);
 }
