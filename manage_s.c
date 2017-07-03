@@ -26,7 +26,6 @@ int	manage_s(va_list *arg, t_info *new)
 
 	if (new->length == 'l')
 	{
-		return (-1);
 		return (handle_wide_str(arg, new));
 	}
 	if (!(str = printf_strdup(va_arg(*arg, char*))))
