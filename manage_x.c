@@ -41,6 +41,7 @@ int	manage_x(va_list *arg, t_info *new)
 	char *str;
 	int strlen;
 
+	return (-1);
 	if (new->length != '\0')
 		num = get_unsigned_arg(arg, new);
 	else
