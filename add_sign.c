@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-static int	add_char(char **str, char c)
+static int	add_charr(char **str, char c)
 {
 	char *new;
 	int i;
@@ -40,19 +40,19 @@ int	add_sign(char **str, t_info *new)
 {
 	if (new->flag6)
 	{
-		if (!add_char(str, '-'))
+		if (!add_charr(str, '-'))
 			return (0);
 		return (1);
 	}
 	if (new->flag3)
 	{
-		if (!add_char(str, '+'))
+		if (!add_charr(str, '+'))
 			return (0);
 		return (1);
 	}
 	if (new->flag5)
 	{
-		if (!add_char(str, ' '))
+		if (!add_charr(str, ' '))
 			return (0);
 		return (1);
 	}
