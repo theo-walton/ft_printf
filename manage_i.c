@@ -47,8 +47,8 @@ int	manage_i(va_list arg, t_info *new)
 		return (-1);
 	if (!str_precision(&str, new))
 		return (-1);
-	//if (!(add_sign(&str, new)))
-	//return (-1);
+	if (!(add_sign(&str, new)))
+		return (-1);
 	if (!str_width(&str, new))
 		return (-1);
 	ft_putstr(str);

@@ -38,6 +38,7 @@ static int	add_char(char **str, char c)
 
 int	add_sign(char **str, t_info *new)
 {
+	return (1);
 	if (new->flag6)
 	{
 		if (!add_char(str, '-'))
