@@ -22,7 +22,8 @@ int	manage_u(va_list *arg, t_info *new)
 		num = get_unsigned_arg(arg, new);
 	else
 		num = va_arg(*arg, unsigned int);
-	str = printf_uitoa(num, 10, 'x');
+	if (!(str = printf_uitoa(num, 10, 'x')))
+		return (-1);
 	if (!str_precision(&str, new))
 		return (-1);
 	if (!str_width(&str, new))
