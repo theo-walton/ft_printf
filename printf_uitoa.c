@@ -35,7 +35,7 @@ static char	*reducestr(char *str, int size)
 	q = 0;
 	while (i < p)
 		new[q++] = str[i++];
-	free(str);
+	//free(str);
 	return (new);
 }
 
