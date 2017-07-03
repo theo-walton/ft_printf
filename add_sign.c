@@ -22,7 +22,7 @@ static int	add_charr(char **str, char c)
 	i = 0;
 	if (!(new = ft_strnew(sizeof(char) * (strlen + 1))))
 	{
-		free(*str);
+		//free(*str);
 		return (0);
 	}
 	while (i < strlen)
@@ -31,7 +31,7 @@ static int	add_charr(char **str, char c)
 		++i;
 	}
 	new[0] = c;
-	free(*str);
+	//free(*str);
 	*str = new;
 	return (1);
 }
