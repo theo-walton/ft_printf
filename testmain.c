@@ -15,6 +15,7 @@
 
 int	main(void)
 {
-	printf("  : % d\n", -63 );
-	ft_printf("ft: % d\n", -63);
+	char c;
+	printf("  : %lx\n", (long int)&c);
+	ft_printf("ft: %lx\n", (long int)&c);
 }

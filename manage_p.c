@@ -15,5 +15,6 @@
 int	manage_p(va_list *arg, t_info *new)
 {
 	new->flag1 = 1;
+	new->length = 'l';
 	return (manage_x(arg, new));
 }

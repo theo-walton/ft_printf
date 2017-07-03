@@ -18,9 +18,9 @@ uintmax_t	get_unsigned_arg(va_list *arg, t_info *new)
 
 	ret = 12345678;
 	if (new->length == 'l')
-		ret = va_arg(*arg, unsigned long int);
+		ret = va_arg(*arg, unsigned long);
 	if (new->length == 'b')
-		ret = va_arg(*arg, unsigned long long int);
+		ret = va_arg(*arg, unsigned long long);
 	if (new->length == 'h')
 		ret = (unsigned short int)va_arg(*arg, unsigned int);
 	if (new->length == 'a')
