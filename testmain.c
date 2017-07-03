@@ -15,6 +15,6 @@
 
 int	main(void)
 {
-	printf("  : %d\n", -63);
-	ft_printf("ft: %d\n", -63);
+	printf("  : %ld\n", (long)63 );
+	ft_printf("ft: %ld\n", (long)63);
 }

@@ -100,7 +100,6 @@ static void	fix_pos(char **str)
 
 int	str_width(char **str, t_info *new)
 {
-	return (0);
 	if ((int)ft_strlen(*str) >= new->width)
 		return (1);
 	if (!new->flag4 && new->flag2 && (new->precision < 0 || new->flag1))
