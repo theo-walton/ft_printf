@@ -29,13 +29,13 @@ static char	*reducestr(char *str, int size)
 	}
 	if (!(new = ft_strnew(sizeof(char) * (p - i))))
 	{
-		free(str);
+		//free(str);
 		return (NULL);
 	}
 	q = 0;
 	while (i < p)
 		new[q++] = str[i++];
-	//free(str);
+	free(str);
 	return (new);
 }
 
