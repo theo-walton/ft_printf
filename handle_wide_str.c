@@ -33,7 +33,7 @@ static void	print_width(int strlen, t_info *new)
 	width = new->width;
 	if (new->precision)
 	{
-		if (strlen > new->precision)
+		if (strlen > new->precision && new->precision != -1)
 			n = new->precision;
 		else
 			n = strlen;
@@ -83,11 +83,11 @@ int	handle_wide_str(va_list *arg, t_info *new)
 	if (new->flag4)
 	{
 		print_wide_str(arr, new->precision);
-		//print_width(strlen, new);
+		print_width(strlen, new);
 	}
 	else
 	{
-		//print_width(strlen, new);
+		print_width(strlen, new);
 		print_wide_str(arr, new->precision);
 	}
 	return (things_printed(strlen, new));
