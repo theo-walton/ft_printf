@@ -27,16 +27,12 @@ static char	*reducestr(char *str, int size)
 	{
 		p++;
 	}
-	if (!(new = ft_strnew(sizeof(char) * (p - i))))
-	{
-		write(1, "look", 4);
-		free(str);
-		return (NULL);
-	}
+	new = ft_strnew(sizeof(char) * (p - i));
 	q = 0;
-	while (i < p)
+	while (i < p && new)
 		new[q++] = str[i++];
 	free(str);
+	str = NULL;
 	return (new);
 }
 
