@@ -22,8 +22,8 @@ int	manage_s(va_list *arg, t_info *new)
 		return (-1);
 		return (handle_wide_str(arg, new));
 	}
-	str = ft_strdup(va_arg(*arg, char*));
 	return (-1);
+	str = ft_strdup(va_arg(*arg, char*));
 	if (!str_precision(&str, new))
 		return (-1);
 	if (!str_width(&str, new))
