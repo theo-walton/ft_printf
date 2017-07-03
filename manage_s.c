@@ -12,10 +12,16 @@
 
 #include "ft_printf.h"
 
+static char	*printf_strdup(char *str)
+{
+	if (!str)
+		return (ft_strdup("(null)"));
+	return (ft_strdup(str));
+}
+
 int	manage_s(va_list *arg, t_info *new)
 {
 	char *str;
-	char *temp;
 	int strlen;
 
 	if (new->length == 'l')
@@ -23,8 +29,8 @@ int	manage_s(va_list *arg, t_info *new)
 		return (-1);
 		return (handle_wide_str(arg, new));
 	}
-	temp = va_arg(*arg, char*);
-	str = ft_strdup(temp);
+	if (!(str = printf_strdup(va_arg(*arg, char*))))
+		return (-1);
 	if (!str_precision(&str, new))
 		return (-1);
 	if (!str_width(&str, new))
