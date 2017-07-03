@@ -15,6 +15,7 @@
 int	manage_s(va_list *arg, t_info *new)
 {
 	char *str;
+	char *temp;
 	int strlen;
 
 	if (new->length == 'l')
@@ -22,8 +23,8 @@ int	manage_s(va_list *arg, t_info *new)
 		return (-1);
 		return (handle_wide_str(arg, new));
 	}
-	return (-1);
-	str = ft_strdup(va_arg(*arg, char*));
+	temp = va_arg(*arg, char*);
+	str = ft_strdup(temp);
 	if (!str_precision(&str, new))
 		return (-1);
 	if (!str_width(&str, new))
