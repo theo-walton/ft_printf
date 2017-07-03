@@ -21,7 +21,7 @@ static int	add_zeros(char **str, int num)
 	new = ft_strnew(sizeof(char) * (ft_strlen(*str) + num));
 	if (new == NULL)
 	{
-		free(*str);
+		//free(*str);
 		return (0);
 	}
 	while (i < num)
@@ -31,7 +31,7 @@ static int	add_zeros(char **str, int num)
 		new[i] = (*str)[i - num];
 		++i;
 	}
-	free(*str);
+	//free(*str);
 	*str = new;
 	return (1);
 }
