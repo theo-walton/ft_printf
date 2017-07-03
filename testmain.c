@@ -15,6 +15,6 @@
 
 int	main(void)
 {
-	printf("  : %-12.4o\n", 689803);
-	ft_printf("ft: %-12.4o\n", 689803);
+	printf("  : %lu\n", 0xffffffffffffff);
+	ft_printf("ft: %lu\n", 0xffffffffffffff);
 }

@@ -83,7 +83,7 @@ char	*printf_uitoa(uintmax_t num, int base, char xX)
 	if (num == 0)
 		return (zerostring());
 	get_digits(digits, xX);
-	i = sizeof(uintmax_t) * 2;
+	i = sizeof(uintmax_t) * 4;
 	if ((str = ft_strnew(sizeof(char) * i)) == NULL)
 		return (NULL);
 	while (num)
