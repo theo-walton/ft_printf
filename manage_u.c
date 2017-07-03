@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	manage_u(va_list arg, t_info *new)
+int	manage_u(va_list *arg, t_info *new)
 {
 	uintmax_t num;
 	char *str;
@@ -21,7 +21,7 @@ int	manage_u(va_list arg, t_info *new)
 	if (new->length != '\0')
 		num = get_unsigned_arg(arg, new);
 	else
-		num = va_arg(arg, unsigned int);
+		num = va_arg(*arg, unsigned int);
 	str = printf_uitoa(num, 10, 'x');
 	if (!str_precision(&str, new))
 		return (-1);

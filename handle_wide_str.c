@@ -70,12 +70,12 @@ static int	things_printed(int strlen, t_info *new)
 	return (ret);
 }
 
-int	handle_wide_str(va_list arg, t_info *new)
+int	handle_wide_str(va_list *arg, t_info *new)
 {
 	int *arr;
 	int strlen;
 
-	arr = va_arg(arg, int*);
+	arr = va_arg(*arg, int*);
 	strlen = get_wide_len(arr);
 	if (new->flag4)
 	{

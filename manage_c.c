@@ -27,13 +27,13 @@ static void	width(t_info *new)
 	}
 }
 
-int	manage_c(va_list arg, t_info *new)
+int	manage_c(va_list *arg, t_info *new)
 {
 	char c;
 
 	if (new->length == 'l')
 		return (handle_wide_char(arg, new));
-	c = (char)va_arg(arg, int);
+	c = (char)va_arg(*arg, int);
 	if (new->flag4)
 	{
 		ft_putchar(c);

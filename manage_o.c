@@ -27,7 +27,7 @@ static void	change_precision(char *str, t_info *new)
 		new->precision = 1;
 }
 
-int	manage_o(va_list arg, t_info *new)
+int	manage_o(va_list *arg, t_info *new)
 {
 	uintmax_t num;
 	char *str;
@@ -36,7 +36,7 @@ int	manage_o(va_list arg, t_info *new)
 	if (new->length != '\0')
 		num = get_unsigned_arg(arg, new);
 	else
-		num = va_arg(arg, unsigned int);
+		num = va_arg(*arg, unsigned int);
 	str = printf_uitoa(num, 8, 'x');
 	if (str == NULL)
 		return (-1);

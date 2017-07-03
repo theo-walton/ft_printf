@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-static int	command_center2(va_list arg, t_info *new)
+static int	command_center2(va_list *arg, t_info *new)
 {
 	int ret;
 
@@ -34,7 +34,7 @@ static int	command_center2(va_list arg, t_info *new)
 	return (ret);
 }
 
-int	command_center(va_list arg, t_info *new)
+int	command_center(va_list *arg, t_info *new)
 {
 	int ret;
 

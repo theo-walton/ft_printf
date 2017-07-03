@@ -12,14 +12,14 @@
 
 #include "ft_printf.h"
 
-int	manage_s(va_list arg, t_info *new)
+int	manage_s(va_list *arg, t_info *new)
 {
 	char *str;
 	int strlen;
 
 	if (new->length == 'l')
 		return (handle_wide_str(arg, new));
-	str = ft_strdup(va_arg(arg, char*));
+	str = ft_strdup(va_arg(*arg, char*));
 	if (!str_precision(&str, new))
 		return (-1);
 	if (!str_width(&str, new))

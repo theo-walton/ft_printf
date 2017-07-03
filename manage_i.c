@@ -31,7 +31,7 @@ static void	check_negative(intmax_t num, uintmax_t *num2, t_info *new)
 		*num2 = num;
 }
 
-int	manage_i(va_list arg, t_info *new)
+int	manage_i(va_list *arg, t_info *new)
 {
 	intmax_t num;
 	uintmax_t num2;
@@ -41,7 +41,7 @@ int	manage_i(va_list arg, t_info *new)
 	if (new->length != '\0')
 		num = get_signed_arg(arg, new);
 	else
-		num = va_arg(arg, int);
+		num = va_arg(*arg, int);
 	check_negative(num, &num2, new);
 	if (!(str = printf_uitoa(num2, 10, 'x')))
 		return (-1);

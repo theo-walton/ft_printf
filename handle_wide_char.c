@@ -27,11 +27,11 @@ static void	width(t_info *new)
 	}
 }
 
-int	handle_wide_char(va_list arg, t_info *new)
+int	handle_wide_char(va_list *arg, t_info *new)
 {
 	int i;
 
-	i = va_arg(arg, int);
+	i = va_arg(*arg, int);
 	if (new->flag4)
 	{
 		print_wide_char(i);

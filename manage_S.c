@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	manage_S(va_list arg, t_info *new)
+int	manage_S(va_list *arg, t_info *new)
 {
 	new->length = 'l';
 	return (manage_s(arg, new));

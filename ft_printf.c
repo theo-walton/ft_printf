@@ -42,7 +42,7 @@ int	ft_printf(const char *format, ...)
 		total_print = print_till_control(format, &i);
 		ret = ret + total_print;
 		if (format[i])
-			total_print = command_center(arg, what_control(format, &i));
+			total_print = command_center(&arg, what_control(format, &i));
 		ret = ret + total_print;
 		if (total_print < 0)
 			ret = total_print;

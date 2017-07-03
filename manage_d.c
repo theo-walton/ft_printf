@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	manage_d(va_list arg, t_info *new)
+int	manage_d(va_list *arg, t_info *new)
 {
 	return (manage_i(arg, new));
 }

@@ -35,7 +35,7 @@ static int	add_0x(char **str)
 	return (1);
 }
 
-int	manage_x(va_list arg, t_info *new)
+int	manage_x(va_list *arg, t_info *new)
 {
 	uintmax_t num;
 	char *str;
@@ -44,7 +44,7 @@ int	manage_x(va_list arg, t_info *new)
 	if (new->length != '\0')
 		num = get_unsigned_arg(arg, new);
 	else
-		num = va_arg(arg, unsigned int);
+		num = va_arg(*arg, unsigned int);
 	str = printf_uitoa(num, 16, 'x');
 	if (str == NULL)
 		return (-1);
