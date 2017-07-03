@@ -15,6 +15,6 @@
 
 int	main(void)
 {
-	printf("  : %s\n", "hello");
-	ft_printf("ft: %s\n", "hello");
+	printf("  : %#.1o\n", 0);
+	ft_printf("ft: %#.1o\n", 0);
 }

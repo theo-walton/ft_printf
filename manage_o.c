@@ -18,7 +18,10 @@ static void	change_precision(char *str, t_info *new)
 
 	strlen = ft_strlen(str);
 	if (strlen == 1 && str[0] == '0')
+	{
 		new->precision = 1;
+		return ;
+	}
 	if (new->precision > strlen)
 		return ;
 	if (str[0] != 0)
