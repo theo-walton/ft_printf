@@ -18,7 +18,6 @@ int	manage_u(va_list *arg, t_info *new)
 	char *str;
 	int strlen;
 
-	return (-1);
 	if (new->length != '\0')
 		num = get_unsigned_arg(arg, new);
 	else
@@ -30,6 +29,6 @@ int	manage_u(va_list *arg, t_info *new)
 		return (-1);
 	ft_putstr(str);
 	strlen = ft_strlen(str);
-	free(str);
+	//free(str);
 	return (strlen);
 }

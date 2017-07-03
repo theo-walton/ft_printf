@@ -14,7 +14,6 @@
 
 int	manage_S(va_list *arg, t_info *new)
 {
-	return (-1);
 	new->length = 'l';
 	return (manage_s(arg, new));
 }
