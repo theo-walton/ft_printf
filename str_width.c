@@ -21,7 +21,7 @@ static int	add_zeros(char **str, int num)
 	new = ft_strnew(sizeof(char) * (ft_strlen(*str) + num));
 	if (new == NULL)
 	{
-		free(*str);
+		//free(*str);
 		return (0);
 	}
 	while (i < num)
@@ -31,7 +31,7 @@ static int	add_zeros(char **str, int num)
 		new[i] = (*str)[i - num];
 		++i;
 	}
-	free(*str);
+	//free(*str);
 	*str = new;
 	return (1);
 }
@@ -45,7 +45,7 @@ static int      add_blanks_left(char **str, int num)
 	new = ft_strnew(sizeof(char) * (ft_strlen(*str) + num));
 	if (new == NULL)
 	{
-		free(*str);
+		//free(*str);
 		return (0);
 	}
 	while (i < num)
@@ -55,32 +55,32 @@ static int      add_blanks_left(char **str, int num)
 		new[i] = (*str)[i - num];
 		++i;
 	}
-	free(*str);
+	//free(*str);
 	*str = new;
 	return (1);
 }
 
 static int      add_blanks_right(char **str, int num)
 {
-        char *new;
-        int i;
+	char *new;
+	int i;
 	int strlen;
 
 	strlen = ft_strlen(*str);
-        i = -1;
-        new = ft_strnew(sizeof(char) * (strlen + num));
-        if (new == NULL)
-        {
-                free(*str);
-                return (0);
-        }
-        while (++i < strlen)
+	i = -1;
+	new = ft_strnew(sizeof(char) * (strlen + num));
+	if (new == NULL)
+	{
+		//free(*str);
+		return (0);
+	}
+	while (++i < strlen)
 		new[i] = (*str)[i];
 	while (i < strlen + num)
 		new[i++] = ' ';
-        free(*str);
-        *str = new;
-        return (1);
+	//free(*str);
+	*str = new;
+	return (1);
 }
 
 static void	fix_pos(char **str)
