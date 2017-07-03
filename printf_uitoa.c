@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-static char	*reducestr(char *str, int size)
+static char	*reducestr(char **str)
 {
 	char *new;
 	int i;
@@ -20,19 +20,18 @@ static char	*reducestr(char *str, int size)
 	int q;
 
 	i = 0;
-	while (str[i] == '\0' && i < size)
+	while ((*str)[i] == '\0')
 		i++;
 	p = i;
-	while (str[p] != '\0')
+	while ((*str)[p] != '\0')
 	{
 		p++;
 	}
 	new = ft_strnew(sizeof(char) * (p - i));
 	q = 0;
 	while (i < p && new)
-		new[q++] = str[i++];
-	free(str);
-	str = NULL;
+		new[q++] = (*str)[i++];
+	free(*str);
 	return (new);
 }
 
@@ -91,5 +90,5 @@ char	*printf_uitoa(uintmax_t num, int base, char xX)
 		str[--i] = digits[num % base];
 		num = num / base;
 	}
-	return (reducestr(str, sizeof(uintmax_t) * 2));
+	return (reducestr(&str));
 }
