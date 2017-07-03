@@ -44,7 +44,7 @@ static void	print_width(int strlen, t_info *new)
 	{
 		if (new->flag2)
 			ft_putchar('0');
-		else 
+		else
 			ft_putchar(' ');
 	}
 }
@@ -56,7 +56,7 @@ static void	print_wide_str(int *arr, int precision)
 	i = 0;
 	if (precision < 0)
 		precision = 2147483647;
-	while (arr[i] && i < precision)
+	while ((char)arr[i] && i < precision)
 		print_wide_char(arr[i++]);
 }
 
