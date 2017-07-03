@@ -83,11 +83,11 @@ int	handle_wide_str(va_list *arg, t_info *new)
 	if (new->flag4)
 	{
 		print_wide_str(arr, new->precision);
-		print_width(strlen, new);
+		//print_width(strlen, new);
 	}
 	else
 	{
-		print_width(strlen, new);
+		//print_width(strlen, new);
 		print_wide_str(arr, new->precision);
 	}
 	return (things_printed(strlen, new));
