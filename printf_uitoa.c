@@ -29,7 +29,7 @@ static char	*reducestr(char *str, int size)
 	}
 	if (!(new = ft_strnew(sizeof(char) * (p - i))))
 	{
-		//free(str);
+		free(str);
 		return (NULL);
 	}
 	q = 0;
