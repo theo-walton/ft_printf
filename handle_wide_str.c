@@ -17,8 +17,11 @@ static int	get_wide_len(int *i)
 	int ret;
 
 	ret = 0;
-	while ((char)i)
+	while ((char)*i)
+	{
+		i = i + 4;
 		ret++;
+	}
 	return (ret);
 }
 
