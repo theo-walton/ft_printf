@@ -17,6 +17,7 @@ int	manage_s(va_list *arg, t_info *new)
 	char *str;
 	int strlen;
 
+	return (-1);
 	if (new->length == 'l')
 	{
 		return (-1);

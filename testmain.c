@@ -15,6 +15,6 @@
 
 int	main(void)
 {
-	printf("  : %#.1o\n", 0);
-	ft_printf("ft: %#.1o\n", 0);
+	printf("  : %.3s\n", "string");
+	ft_printf("ft: %.3s\n", "string");
 }
