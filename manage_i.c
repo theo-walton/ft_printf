@@ -38,6 +38,7 @@ int	manage_i(va_list *arg, t_info *new)
 	char *str;
 	int strlen;
 
+	return (-1);
 	if (new->length != '\0')
 		num = get_signed_arg(arg, new);
 	else

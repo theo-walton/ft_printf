@@ -12,11 +12,15 @@
 
 NAME = libftprintf.a
 
+SRC = lol
+
+ALSOSRC = I dont even need this
+
 all: $(NAME)
 
 $(NAME):
 	@cp libft/includes/libft.h .
-	@gcc -Wall -Wextra -Werror -c *.c libft/*.c -I .
+	@gcc -Wfatal-errors -Wall -Wextra -Werror -c *.c libft/*.c -I .
 	@ar rc $(NAME) *.o
 	@ranlib $(NAME)
 	@rm libft.h
@@ -26,5 +30,13 @@ clean:
 
 fclean: clean
 	@rm -rf $(NAME)
+
+test: fclean all
+	@cp libft/includes/libft.h .
+	@gcc testmain.c $(NAME) -I .
+	@rm libft.h
+	@make fclean
+	@./a.out
+	@rm ./a.out
 
 re: fclean all

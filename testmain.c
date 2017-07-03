@@ -1,33 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_failmalloc.c                                    :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: twalton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/10 00:53:04 by twalton           #+#    #+#             */
-/*   Updated: 2017/06/10 00:53:05 by twalton          ###   ########.fr       */
+/*   Created: 2017/06/30 21:07:39 by twalton           #+#    #+#             */
+/*   Updated: 2017/06/30 21:07:39 by twalton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "ft_printf.h"
+#include <stdio.h>
 
-void	ft_failmalloc(void)
+int	main(void)
 {
-	int *i;
-	long long int n;
-
-	n = 1;
-	i = (int*)&n;
-	while (n)
-	{
-		while (i)
-		{
-			i = malloc(n);
-			if (i)
-				n = n + n;
-		}
-		n = n / 2;
-		i = (int*)&n;
-	}
+	printf("  : %-12.4o\n", 689803);
+	ft_printf("ft: %-12.4o\n", 689803);
 }
