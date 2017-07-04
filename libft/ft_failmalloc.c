@@ -14,8 +14,8 @@
 
 void	ft_failmalloc(void)
 {
-	int *i;
-	long long int n;
+	int				*i;
+	long long int	n;
 
 	n = 1;
 	i = (int*)&n;

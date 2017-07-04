@@ -14,10 +14,10 @@
 
 static char	*reducestr(char **str)
 {
-	char *new;
-	int i;
-	int p;
-	int q;
+	char	*new;
+	int		i;
+	int		p;
+	int		q;
 
 	i = 0;
 	while ((*str)[i] == '\0')
@@ -36,7 +36,7 @@ static char	*reducestr(char **str)
 	return (new);
 }
 
-static void	get_digits(char *digits, char xX)
+static void	get_digits(char *digits, char xx)
 {
 	int i;
 
@@ -46,12 +46,12 @@ static void	get_digits(char *digits, char xX)
 		digits[i] = i + '0';
 		i++;
 	}
-	if (xX == 'x')
+	if (xx == 'x')
 	{
 		while (i < 16)
 		{
 			digits[i] = i + 'a' - 10;
-				i++;
+			i++;
 		}
 	}
 	else
@@ -74,15 +74,15 @@ static char	*zerostring(void)
 	return (new);
 }
 
-char	*printf_uitoa(uintmax_t num, int base, char xX)
+char		*printf_uitoa(uintmax_t num, int base, char xx)
 {
-	char digits[16];
-	char *str;
-	int i;
+	char	digits[16];
+	char	*str;
+	int		i;
 
 	if (num == 0)
 		return (zerostring());
-	get_digits(digits, xX);
+	get_digits(digits, xx);
 	i = sizeof(uintmax_t) * 4;
 	if ((str = ft_strnew(sizeof(char) * i)) == NULL)
 		return (NULL);

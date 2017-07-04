@@ -41,23 +41,23 @@ static int	is_bit(unsigned char byte, int bit_num)
 	return (0);
 }
 
-void	print_wide_char(int i)
+void		print_wide_char(int i)
 {
-	unsigned char *quadbyte;
+	unsigned char *qb;
 
-	quadbyte = (unsigned char*)&i;
-	if (!is_bit(quadbyte[0], 1))
-		write(1, quadbyte, 1);
-	if (is_bit(quadbyte[0], 1) && is_bit(quadbyte[0], 2) && !is_bit(quadbyte[0], 3))
-		write(1, quadbyte, 2);
-	if (is_bit(quadbyte[0], 1) && is_bit(quadbyte[0], 2) && is_bit(quadbyte[0], 3)
-		&& !is_bit(quadbyte[0], 4))
+	qb = (unsigned char*)&i;
+	if (!is_bit(qb[0], 1))
+		write(1, qb, 1);
+	if (is_bit(qb[0], 1) && is_bit(qb[0], 2) && !is_bit(qb[0], 3))
+		write(1, qb, 2);
+	if (is_bit(qb[0], 1) && is_bit(qb[0], 2) && is_bit(qb[0], 3)
+		&& !is_bit(qb[0], 4))
 	{
-		write(1, quadbyte, 3);
+		write(1, qb, 3);
 	}
-	if (is_bit(quadbyte[0], 1) && is_bit(quadbyte[0], 2) && is_bit(quadbyte[0], 3)
-		&& is_bit(quadbyte[0], 4) && !is_bit(quadbyte[0], 5))
+	if (is_bit(qb[0], 1) && is_bit(qb[0], 2) && is_bit(qb[0], 3)
+		&& is_bit(qb[0], 4) && !is_bit(qb[0], 5))
 	{
-		write(1, quadbyte, 4);
+		write(1, qb, 4);
 	}
 }

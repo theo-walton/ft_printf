@@ -18,23 +18,23 @@ static int	command_center2(va_list *arg, t_info *new)
 
 	ret = 0;
 	if (new->specifier == 'U')
-                ret = manage_U(arg, new);
-        else if (new->specifier == 'x')
-                ret = manage_x(arg, new);
-        else if (new->specifier == 'X')
-                ret = manage_X(arg, new);
+		ret = manage_uu(arg, new);
+	else if (new->specifier == 'x')
+		ret = manage_x(arg, new);
+	else if (new->specifier == 'X')
+		ret = manage_xx(arg, new);
 	else if (new->specifier == 'c')
-                ret = manage_c(arg, new);
-        else if (new->specifier == 'C')
-                ret = manage_C(arg, new);
+		ret = manage_c(arg, new);
+	else if (new->specifier == 'C')
+		ret = manage_cc(arg, new);
 	else if (new->specifier == 'u')
-                ret = manage_u(arg, new);
+		ret = manage_u(arg, new);
 	else if (new->specifier == 'd')
 		ret = manage_d(arg, new);
 	return (ret);
 }
 
-int	command_center(va_list *arg, t_info *new)
+int			command_center(va_list *arg, t_info *new)
 {
 	int ret;
 
@@ -46,18 +46,18 @@ int	command_center(va_list *arg, t_info *new)
 	else if (new->specifier == 's')
 		ret = manage_s(arg, new);
 	else if (new->specifier == 'S')
-		ret = manage_S(arg, new);
+		ret = manage_ss(arg, new);
 	else if (new->specifier == 'p')
 		ret = manage_p(arg, new);
 	else if (new->specifier == 'D')
-		ret = manage_D(arg, new);
+		ret = manage_dd(arg, new);
 	else if (new->specifier == 'i')
 		ret = manage_i(arg, new);
 	else if (new->specifier == 'o')
-                ret = manage_o(arg, new);
-        else if (new->specifier == 'O')
-                ret = manage_O(arg, new);
-	else 
+		ret = manage_o(arg, new);
+	else if (new->specifier == 'O')
+		ret = manage_oo(arg, new);
+	else
 		ret = command_center2(arg, new);
 	free(new);
 	return (ret);

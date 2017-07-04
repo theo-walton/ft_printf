@@ -28,7 +28,7 @@ static void	check_length2(const char *format, int *i, t_info *new)
 		new->length = '\0';
 }
 
-void	check_length(const char *format, int *i, t_info *new)
+void		check_length(const char *format, int *i, t_info *new)
 {
 	if (format[*i] == 'h')
 	{

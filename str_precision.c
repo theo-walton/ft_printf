@@ -14,8 +14,8 @@
 
 static int	add_zeros(char **str, int num)
 {
-	char *new;
-	int i;
+	char	*new;
+	int		i;
 
 	i = 0;
 	new = ft_strnew(sizeof(char) * (ft_strlen(*str) + num));
@@ -49,7 +49,7 @@ static int	edgecases(char **str)
 	return (1);
 }
 
-int	str_precision(char **str, t_info *new)
+int			str_precision(char **str, t_info *new)
 {
 	int extra;
 
@@ -57,8 +57,9 @@ int	str_precision(char **str, t_info *new)
 		return (1);
 	if (new->precision == 0)
 		return (edgecases(str));
-	if (new->specifier == 'd' || new->specifier == 'i' || new->specifier == 'o' ||
-	new->specifier == 'u' || new->specifier == 'x' || new->specifier == 'X')
+	if (new->specifier == 'd' || new->specifier == 'i' || new->specifier
+	== 'o' || new->specifier == 'u' || new->specifier == 'x' ||
+	new->specifier == 'X')
 	{
 		extra = new->precision - (int)ft_strlen(*str);
 		if (extra <= 0)
@@ -71,7 +72,7 @@ int	str_precision(char **str, t_info *new)
 		if (new->precision > (int)ft_strlen(*str))
 			return (1);
 		(*str)[new->precision] = '\0';
-			return (1);
+		return (1);
 	}
 	return (1);
 }

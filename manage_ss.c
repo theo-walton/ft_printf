@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   manage_S.c                                         :+:      :+:    :+:   */
+/*   manage_ss.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: twalton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	manage_S(va_list *arg, t_info *new)
+int	manage_ss(va_list *arg, t_info *new)
 {
 	new->length = 'l';
 	return (manage_s(arg, new));

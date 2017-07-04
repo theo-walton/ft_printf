@@ -18,11 +18,11 @@ t_info	*what_control(const char *format, int *i)
 
 	(*i)++;
 	if (format[*i] == '%')
-        {
-                ft_putchar('%');
-                ++(*i);
-                return ((t_info*)1);
-        }
+	{
+		ft_putchar('%');
+		++(*i);
+		return ((t_info*)1);
+	}
 	if ((new = malloc(sizeof(*new))) == NULL)
 		return (NULL);
 	new->flag1 = 0;

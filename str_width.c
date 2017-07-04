@@ -14,8 +14,8 @@
 
 static int	add_zeros(char **str, int num)
 {
-	char *new;
-	int i;
+	char	*new;
+	int		i;
 
 	i = 0;
 	new = ft_strnew(sizeof(char) * (ft_strlen(*str) + num));
@@ -36,10 +36,10 @@ static int	add_zeros(char **str, int num)
 	return (1);
 }
 
-static int      add_blanks_left(char **str, int num)
+static int	add_blanks_left(char **str, int num)
 {
-	char *new;
-	int i;
+	char	*new;
+	int		i;
 
 	i = 0;
 	new = ft_strnew(sizeof(char) * (ft_strlen(*str) + num));
@@ -60,11 +60,11 @@ static int      add_blanks_left(char **str, int num)
 	return (1);
 }
 
-static int      add_blanks_right(char **str, int num)
+static int	add_blanks_right(char **str, int num)
 {
-	char *new;
-	int i;
-	int strlen;
+	char	*new;
+	int		i;
+	int		strlen;
 
 	strlen = ft_strlen(*str);
 	i = -1;
@@ -85,8 +85,8 @@ static int      add_blanks_right(char **str, int num)
 
 static void	fix_pos(char **str)
 {
-	char c;
-	int i;
+	char	c;
+	int		i;
 
 	i = 0;
 	while ((*str)[i] == '0')
@@ -98,7 +98,7 @@ static void	fix_pos(char **str)
 	(*str)[1] = c;
 }
 
-int	str_width(char **str, t_info *new)
+int			str_width(char **str, t_info *new)
 {
 	if ((int)ft_strlen(*str) >= new->width)
 		return (1);

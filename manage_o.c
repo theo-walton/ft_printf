@@ -28,15 +28,15 @@ static void	change_precision(char *str, t_info *new)
 	{
 		new->precision = strlen + 1;
 	}
-	else 
+	else
 		new->precision = 1;
 }
 
-int	manage_o(va_list *arg, t_info *new)
+int			manage_o(va_list *arg, t_info *new)
 {
-	uintmax_t num;
-	char *str;
-	int strlen;
+	uintmax_t	num;
+	char		*str;
+	int			strlen;
 
 	if (new->length != '\0')
 		num = get_unsigned_arg(arg, new);

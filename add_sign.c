@@ -14,9 +14,9 @@
 
 static int	add_charrr(char **str, char c)
 {
-	char *temp;
-	int i;
-	int strlen;
+	char	*temp;
+	int		i;
+	int		strlen;
 
 	strlen = ft_strlen(*str);
 	i = 0;
@@ -49,9 +49,9 @@ static int	add_char(char **str, char c)
 
 static int	add_charr(char **str, char c, t_info *new)
 {
-	char *temp;
-	int i;
-	int strlen;
+	char	*temp;
+	int		i;
+	int		strlen;
 
 	if (new->toggle)
 		return (add_char(str, c));
@@ -73,7 +73,7 @@ static int	add_charr(char **str, char c, t_info *new)
 	return (1);
 }
 
-int	add_sign(char **str, t_info *new)
+int			add_sign(char **str, t_info *new)
 {
 	(new->toggle)++;
 	if ((new->flag2 || new->toggle) && !(new->flag2 && new->toggle))

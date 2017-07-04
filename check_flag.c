@@ -19,10 +19,11 @@ static int	isflag(const char c)
 	return (0);
 }
 
-void	check_flag(const char *format, int *i, t_info *new)
+void		check_flag(const char *format, int *i, t_info *new)
 {
 	int counter;
 	int iter;
+
 	iter = 0;
 	counter = 0;
 	while (isflag(format[*i + counter]))
@@ -31,14 +32,14 @@ void	check_flag(const char *format, int *i, t_info *new)
 	{
 		if (format[*i + iter] == '#')
 			new->flag1 = 1;
-		if (format[*i +	iter] == '0')
+		if (format[*i + iter] == '0')
 			new->flag2 = 1;
-		if (format[*i +	iter] == '+')
+		if (format[*i + iter] == '+')
 			new->flag3 = 1;
-		if (format[*i +	iter] == '-')
+		if (format[*i + iter] == '-')
 			new->flag4 = 1;
-		if (format[*i +	iter] == ' ')
-                        new->flag5 = 1;
+		if (format[*i + iter] == ' ')
+			new->flag5 = 1;
 		++iter;
 	}
 	(*i) = (*i) + counter;

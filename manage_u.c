@@ -14,9 +14,9 @@
 
 int	manage_u(va_list *arg, t_info *new)
 {
-	uintmax_t num;
-	char *str;
-	int strlen;
+	uintmax_t	num;
+	char		*str;
+	int			strlen;
 
 	if (new->length != '\0')
 		num = get_unsigned_arg(arg, new);

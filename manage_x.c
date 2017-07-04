@@ -14,8 +14,8 @@
 
 static int	add_0x(char **str)
 {
-	int strlen;
-	char *new;
+	int		strlen;
+	char	*new;
 
 	strlen = ft_strlen(*str);
 	if (!(new = ft_strnew(sizeof(char) * strlen + 2)))
@@ -35,11 +35,11 @@ static int	add_0x(char **str)
 	return (1);
 }
 
-int	manage_x(va_list *arg, t_info *new)
+int			manage_x(va_list *arg, t_info *new)
 {
-	uintmax_t num;
-	char *str;
-	int strlen;
+	uintmax_t	num;
+	char		*str;
+	int			strlen;
 
 	if (new->length != '\0')
 		num = get_unsigned_arg(arg, new);

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   manage_X.c                                         :+:      :+:    :+:   */
+/*   manage_xx.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: twalton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,10 +12,10 @@
 
 #include "ft_printf.h"
 
-static int	add_0X(char **str)
+static int	add_0xx(char **str)
 {
-	int strlen;
-	char *new;
+	int		strlen;
+	char	*new;
 
 	strlen = ft_strlen(*str);
 	if (!(new = ft_strnew(sizeof(char) * strlen + 2)))
@@ -35,11 +35,11 @@ static int	add_0X(char **str)
 	return (1);
 }
 
-int	manage_X(va_list *arg, t_info *new)
+int			manage_xx(va_list *arg, t_info *new)
 {
-	uintmax_t num;
-	char *str;
-	int strlen;
+	uintmax_t	num;
+	char		*str;
+	int			strlen;
 
 	if (new->length != '\0')
 		num = get_unsigned_arg(arg, new);
@@ -51,7 +51,7 @@ int	manage_X(va_list *arg, t_info *new)
 	if (!str_precision(&str, new))
 		return (-1);
 	if (new->flag1)
-		if (!add_0X(&str))
+		if (!add_0xx(&str))
 			return (-1);
 	if (!str_width(&str, new))
 		return (-1);

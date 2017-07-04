@@ -27,7 +27,7 @@ static void	width(t_info *new)
 	}
 }
 
-int	manage_c(va_list *arg, t_info *new)
+int			manage_c(va_list *arg, t_info *new)
 {
 	char c;
 

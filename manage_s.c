@@ -19,10 +19,10 @@ static char	*printf_strdup(char *str)
 	return (ft_strdup(str));
 }
 
-int	manage_s(va_list *arg, t_info *new)
+int			manage_s(va_list *arg, t_info *new)
 {
-	char *str;
-	int strlen;
+	char	*str;
+	int		strlen;
 
 	if (new->length == 'l')
 	{

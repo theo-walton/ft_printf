@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   manage_U.c                                         :+:      :+:    :+:   */
+/*   manage_cc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: twalton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/25 17:53:58 by twalton           #+#    #+#             */
-/*   Updated: 2017/06/25 17:53:58 by twalton          ###   ########.fr       */
+/*   Created: 2017/06/26 22:46:41 by twalton           #+#    #+#             */
+/*   Updated: 2017/06/26 22:46:41 by twalton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	manage_U(va_list *arg, t_info *new)
+int	manage_cc(va_list *arg, t_info *new)
 {
 	new->length = 'l';
-	return (manage_u(arg, new));
+	return (manage_c(arg, new));
 }

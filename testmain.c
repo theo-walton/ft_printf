@@ -15,6 +15,6 @@
 
 int	main(void)
 {
-	printf("%.2s\n", NULL);
-	ft_printf("%.2s\n", NULL);
+	ft_putnbr(printf("%s\nab", "hello"));
+	ft_putnbr(ft_printf("%s\nab", "hello"));
 }

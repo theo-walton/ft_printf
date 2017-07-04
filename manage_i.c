@@ -20,7 +20,7 @@ static uintmax_t	make_pos(intmax_t num)
 	return (ret);
 }
 
-static void	check_negative(intmax_t num, uintmax_t *num2, t_info *new)
+static void			check_negative(intmax_t num, uintmax_t *num2, t_info *new)
 {
 	if (num < 0)
 	{
@@ -31,12 +31,12 @@ static void	check_negative(intmax_t num, uintmax_t *num2, t_info *new)
 		*num2 = num;
 }
 
-int	manage_i(va_list *arg, t_info *new)
+int					manage_i(va_list *arg, t_info *new)
 {
-	intmax_t num;
-	uintmax_t num2;
-	char *str;
-	int strlen;
+	intmax_t	num;
+	uintmax_t	num2;
+	char		*str;
+	int			strlen;
 
 	if (new->length != '\0')
 		num = get_signed_arg(arg, new);
